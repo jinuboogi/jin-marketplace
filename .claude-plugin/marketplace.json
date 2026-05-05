@@ -1,0 +1,24 @@
+{
+  "name": "jin-marketplace",
+  "owner": {
+    "name": "jin",
+    "email": "jeanlee1041@gmail.com"
+  },
+  "metadata": {
+    "description": "jin의 로컬 플러그인 마켓플레이스",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "stock-market-research",
+      "source": "./stock-market-research",
+      "description": "한국·미국 증시를 한국경제(Chrome)와 네이버 뉴스(MCP)에서 병렬로 조사해 docx 보고서를 생성하는 플러그인",
+      "version": "1.0.0",
+      "author": {
+        "name": "Claude (Cowork)"
+      },
+      "category": "finance",
+      "tags": ["stock", "kospi", "kosdaq", "sp500", "research", "report", "korea", "us-market"]
+    }
+  ]
+}
