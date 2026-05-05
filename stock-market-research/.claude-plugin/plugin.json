@@ -1,0 +1,51 @@
+{
+  "name": "stock-market-research",
+  "version": "1.0.0",
+  "description": "한국·미국 증시를 한국경제(Claude for Chrome)와 네이버 뉴스(MCP)에서 병렬로 조사해 docx 보고서를 생성하는 플러그인",
+  "author": {
+    "name": "Claude (Cowork)",
+    "email": "noreply@anthropic.com"
+  },
+  "keywords": [
+    "stock",
+    "finance",
+    "korea",
+    "us-market",
+    "kospi",
+    "kosdaq",
+    "sp500",
+    "nasdaq",
+    "research",
+    "report"
+  ],
+  "license": "MIT",
+  "components": {
+    "agents": [
+      "agents/naver-news-researcher.md",
+      "agents/hankyung-chrome-researcher.md"
+    ],
+    "commands": [
+      "commands/stock-research.md"
+    ],
+    "skills": [
+      "skills/stock-research"
+    ]
+  },
+  "requirements": {
+    "mcps": [
+      {
+        "name": "NaverSearch",
+        "description": "네이버 뉴스/웹 검색 MCP 서버 (search_news, search_webkr)",
+        "optional": false
+      },
+      {
+        "name": "Claude_in_Chrome",
+        "description": "Claude for Chrome 브라우저 자동화 (한국경제 사이트 접속용)",
+        "optional": false
+      }
+    ],
+    "skills": [
+      "anthropic-skills:docx"
+    ]
+  }
+}
